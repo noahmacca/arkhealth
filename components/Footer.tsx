@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 
-function Footer() {
+function Footer(): ReactElement {
     return (
         <footer className="relative bg-gray-300 pt-8 pb-6">
         <div

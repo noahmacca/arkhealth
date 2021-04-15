@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 
+interface Props {
+    transparent?:boolean
+}
 
-function Navbar(props) {
+function Navbar(props: Props): ReactElement {
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
         <nav
