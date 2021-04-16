@@ -15,8 +15,6 @@ const IndexPage = () => (
 
 export default IndexPage
 
-const heroImageKey = 'NURSE_COMPUTER'
-
 /// Page Sections
 const Hero = () => (<div className="relative pt-16 pb-32 flex content-center items-center justify-center"
   style={{
