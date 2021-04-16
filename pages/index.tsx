@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import { useState } from 'react';
+import * as emailjs from 'emailjs-com';
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
@@ -345,8 +346,24 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const subscribe = () => {
+  const submit = () => {
     console.log('hit subscribe!', name, email, message);
+    // emailjs.init('user_J8o62m6BktAmspvjxLjKS');
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'Noah',
+      message: message
+    };
+    emailjs.send(
+      'service_ezgq53n',
+      'template_ipgedhg',
+      templateParams,
+      'user_J8o62m6BktAmspvjxLjKS'
+    )
+    setMessage('');
+    setEmail('');
+    setName('');
   }
 
   return (
@@ -416,7 +433,7 @@ const Contact = () => {
                     className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                     type="button"
                     style={{ transition: "all .15s ease" }}
-                    onClick={subscribe}
+                    onClick={submit}
                   >
                     Send Message
               </button>
