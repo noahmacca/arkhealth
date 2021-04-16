@@ -3,7 +3,7 @@ import { useState } from 'react';
 import * as emailjs from 'emailjs-com';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <Layout title="Ark Health">
 
     <Hero />
     <Services />
