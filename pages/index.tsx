@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import { useState } from 'react';
 import * as emailjs from 'emailjs-com';
+import * as gtag from "../lib/gtag";
 
 const IndexPage = () => (
   <Layout title="Ark Health">
@@ -348,6 +349,13 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const submit = () => {
     console.log('hit subscribe!', name, email, message);
+    //action, category, label, value
+    gtag.event({
+      action: "leadFormSubmit",
+      category: 'testCategory',
+      label: 'testLabel',
+      value: 1
+    })
     // emailjs.init('user_J8o62m6BktAmspvjxLjKS');
     const templateParams = {
       from_name: name,
