@@ -121,19 +121,14 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
           <i className="fas fa-user-friends text-xl"></i>
         </div>
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
-          Working with us is a pleasure
+          Become a top performing research site
           </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-          Don't let your uses guess by attaching tooltips and popoves
-          to any element. Just make sure you enable them first via
-          JavaScript.
-          </p>
+          Recruiting for clinical trials shouldn't be so hard. Eligible patients are like a needle in a haystack – let us do the heavy lifting to help find eligible patients who are excited to participate in the cutting edge of medicine. 
+        </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-          The kit comes with three pre-built pages to help you get
-          started faster. You can change the text and images and
-          you're good to go. Just make sure you enable them first via
-          JavaScript.
-          </p>
+          We'll work with you to understand your workflows, and   
+        </p>
         <a
           href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
           className="font-bold text-gray-800 mt-8"
