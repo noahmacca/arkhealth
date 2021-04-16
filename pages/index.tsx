@@ -31,7 +31,7 @@ const Hero = () => (<div className="relative pt-16 pb-32 flex content-center ite
   <div className="container relative mx-auto">
     <div className="items-center flex flex-wrap">
       <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-        <div className="pr-12">
+        <div className="px-4">
           <h1 className="text-white font-semibold text-5xl">
             Faster Clinical Trial Recruitment
           </h1>
