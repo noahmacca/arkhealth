@@ -22,7 +22,7 @@ function Navbar(props: Props): ReactElement {
               " title-lg text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             }
           >
-            Fabric Bio
+            Ark Health
             </div>
         </div>
       </div>
