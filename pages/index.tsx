@@ -6,7 +6,6 @@ const IndexPage = () => (
     <Hero />
     <Services />
     <Featured />
-    <Team />
     <Finisher />
     <Contact />
 
@@ -69,7 +68,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-              <i className="fas fa-award"></i>
+              <i className="fas fa-project-diagram"></i>
             </div>
             <h6 className="text-xl font-semibold">Understand Your EMR Data</h6>
             <p className="mt-2 mb-4 text-gray-600">
@@ -83,10 +82,10 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-              <i className="fas fa-retweet"></i>
+              <i className="fas fa-search"></i>
             </div>
             <h6 className="text-xl font-semibold">
-              Connect With New Patients
+              Discover New Patients
               </h6>
             <p className="mt-2 mb-4 text-gray-600">
               There are many people in the larger community who would love to participate in your study. We screen for eligibility and connect them to your staff.
@@ -95,14 +94,14 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         </div>
       </div>
 
-      <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+      <div className="md:pt-6 w-full md:w-4/12 px-4 text-center">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-              <i className="fas fa-fingerprint"></i>
+              <i className="fas fa-user-friends"></i>
             </div>
             <h6 className="text-xl font-semibold">
-              Enroll
+              Enroll Patients
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
               Use industry-leading tools to ensure nobody slips through the cracks. Easily reach out, schedule appointments, request and review charts, and receive informed consent.
@@ -115,31 +114,22 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
 
     <div className="flex flex-wrap items-center mt-32">
       <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-          <i className="fas fa-user-friends text-xl"></i>
-        </div>
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
           Become a top performing research site
           </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-          Recruiting for clinical trials shouldn't be so hard. Eligible patients are like a needle in a haystack – let us do the heavy lifting to help find eligible patients who are excited to participate in the cutting edge of medicine. 
+          Recruiting for clinical trials shouldn't be so hard. Let us do the heavy lifting to help find eligible patients who are excited to participate in the cutting edge of medicine.
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-          We'll work with you to understand your workflows, and   
+          We'll work with your team to implement our enrollment management system. Your team will enroll more patients faster, and with less manual tracking and work.
         </p>
-        <a
-          href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-          className="font-bold text-gray-800 mt-8"
-        >
-          Check Tailwind Starter Kit!
-          </a>
       </div>
 
       <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
         <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-600">
           <img
             alt="..."
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+            src="https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2700&q=80"
             className="w-full align-middle rounded-t-lg"
           />
           <blockquote className="relative p-8 mb-4">
@@ -159,13 +149,11 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               ></polygon>
             </svg>
             <h4 className="text-xl font-bold text-white">
-              Top Notch Services
-              </h4>
+              Site-Level Analytics
+            </h4>
             <p className="text-md font-light mt-2 text-white">
-              The Arctic Ocean freezes every winter and much of the
-              sea-ice then thaws every summer, and that process will
-              continue whatever happens.
-              </p>
+              We'll help your clinical site lead understand how your site is performing, whether it's on track to hit your goals, and what you can do to improve.
+            </p>
           </blockquote>
         </div>
       </div>
@@ -174,7 +162,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
   </div>
 </section>
 
-const Featured = () => <section className="relative py-20">
+const Featured = () => <section className="relative py-20 pb-32">
   <div
     className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
     style={{ height: "80px" }}
@@ -197,37 +185,32 @@ const Featured = () => <section className="relative py-20">
 
   <div className="container mx-auto px-4">
     <div className="items-center flex flex-wrap">
-      <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+      <div className="max-w-full md:w-5/12 ml-auto mr-auto px-4 mb-4">
         <img
           alt="..."
           className="max-w-full rounded-lg shadow-lg"
-          src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+          src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2704&q=80"
         />
       </div>
       <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
         <div className="md:pr-12">
-          <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-            <i className="fas fa-rocket text-xl"></i>
-          </div>
           <h3 className="text-3xl font-semibold">
-            A growing company
+            How it works
             </h3>
           <p className="mt-4 text-lg leading-relaxed text-gray-600">
-            The extension comes with three pre-built pages to help you
-            get started faster. You can change the text and images and
-            you're good to go.
-            </p>
+            We understand how the best sites become top performers. The right tools are key to meet enrollment timelines.
+          </p>
           <ul className="list-none mt-6">
             <li className="py-2">
               <div className="flex items-center">
                 <div>
                   <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                    <i className="fas fa-fingerprint"></i>
+                    <i className="fas fa-envelope-open-text"></i>
                   </span>
                 </div>
                 <div>
                   <h4 className="text-gray-600">
-                    Carefully crafted components
+                    Automated patient engagement
                     </h4>
                 </div>
               </div>
@@ -236,11 +219,11 @@ const Featured = () => <section className="relative py-20">
               <div className="flex items-center">
                 <div>
                   <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                    <i className="fab fa-html5"></i>
+                    <i className="fas fa-calendar-plus"></i>
                   </span>
                 </div>
                 <div>
-                  <h4 className="text-gray-600">Amazing page examples</h4>
+                  <h4 className="text-gray-600">Automated scheduling</h4>
                 </div>
               </div>
             </li>
@@ -248,11 +231,35 @@ const Featured = () => <section className="relative py-20">
               <div className="flex items-center">
                 <div>
                   <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                    <i className="far fa-paper-plane"></i>
+                    <i className="fas fa-paper-plane"></i>
                   </span>
                 </div>
                 <div>
-                  <h4 className="text-gray-600">Dynamic components</h4>
+                  <h4 className="text-gray-600">Automated records request</h4>
+                </div>
+              </div>
+            </li>
+            <li className="py-2">
+              <div className="flex items-center">
+                <div>
+                  <span className="text-xs font-semibold inline-block py-1 px-2.5 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                    <i className="fas fa-file-medical"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-gray-600">Fast chart review</h4>
+                </div>
+              </div>
+            </li>
+            <li className="py-2">
+              <div className="flex items-center">
+                <div>
+                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                    <i className="fas fa-check-square"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-gray-600">eConsent and patient education</h4>
                 </div>
               </div>
             </li>
@@ -263,176 +270,6 @@ const Featured = () => <section className="relative py-20">
   </div>
 </section>
 
-const Team = () => <section className="pt-20 pb-48">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-wrap justify-center text-center mb-24">
-      <div className="w-full lg:w-6/12 px-4">
-        <h2 className="text-4xl font-semibold">
-          Here are our heroes
-          </h2>
-        <p className="text-lg leading-relaxed m-4 text-gray-600">
-          According to the National Oceanic and Atmospheric
-          Administration, Ted, Scambos, NSIDClead scentist, puts the
-          potentially record maximum.
-          </p>
-      </div>
-    </div>
-    <div className="flex flex-wrap">
-      <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-        <div className="px-6">
-          <img
-            alt="..."
-            src={require('../assets/img/team-1-800x800.jpg')}
-            className="shadow-lg rounded-full max-w-full mx-auto"
-            style={{ maxWidth: "120px" }}
-          />
-          <div className="pt-6 text-center">
-            <h5 className="text-xl font-bold">
-              Ryan Tompson
-              </h5>
-            <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Web Developer
-              </p>
-            <div className="mt-6">
-              <button
-                className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-twitter"></i>
-              </button>
-              <button
-                className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </button>
-              <button
-                className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-dribbble"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-        <div className="px-6">
-          <img
-            alt="..."
-            src={require('../assets/img/team-2-800x800.jpg')}
-            className="shadow-lg rounded-full max-w-full mx-auto"
-            style={{ maxWidth: "120px" }}
-          />
-          <div className="pt-6 text-center">
-            <h5 className="text-xl font-bold">
-              Romina Hadid
-              </h5>
-            <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Marketing Specialist
-              </p>
-            <div className="mt-6">
-              <button
-                className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-google"></i>
-              </button>
-              <button
-                className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-        <div className="px-6">
-          <img
-            alt="..."
-            src={require('../assets/img/team-3-800x800.jpg')}
-            className="shadow-lg rounded-full max-w-full mx-auto"
-            style={{ maxWidth: "120px" }}
-          />
-          <div className="pt-6 text-center">
-            <h5 className="text-xl font-bold">
-              Alexa Smith
-              </h5>
-            <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              UI/UX Designer
-              </p>
-            <div className="mt-6">
-              <button
-                className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-google"></i>
-              </button>
-              <button
-                className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-twitter"></i>
-              </button>
-              <button
-                className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-instagram"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-        <div className="px-6">
-          <img
-            alt="..."
-            src={require('../assets/img/team-4-470x470.png')}
-            className="shadow-lg rounded-full max-w-full mx-auto"
-            style={{ maxWidth: "120px" }}
-          />
-          <div className="pt-6 text-center">
-            <h5 className="text-xl font-bold">
-              Jenna Kardi
-              </h5>
-            <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Founder and CEO
-              </p>
-            <div className="mt-6">
-              <button
-                className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-dribbble"></i>
-              </button>
-              <button
-                className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-google"></i>
-              </button>
-              <button
-                className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-twitter"></i>
-              </button>
-              <button
-                className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                type="button"
-              >
-                <i className="fab fa-instagram"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 const Finisher = () => <section className="pb-20 relative block bg-gray-900">
   <div
@@ -454,55 +291,50 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
       ></polygon>
     </svg>
   </div>
-
-  <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+  <div className="container mx-auto px-4 pt-12 lg:pt-24 lg:pb-64">
     <div className="flex flex-wrap text-center justify-center">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold text-white">
-          Build something
-          </h2>
+          Who We Are
+        </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-          Put the potentially record low maximum sea ice extent tihs year down to low ice.
-          According to the National Oceanic and Atmospheric Administration, Ted, Scambos.
-          </p>
+          Clinical Trials are a key bottleneck for new, lifesaving medicine to reach patients, and we're passionate about making them dramatically faster, cheaper, and more accessible.
+        </p>
       </div>
     </div>
     <div className="flex flex-wrap mt-12 justify-center">
       <div className="w-full lg:w-3/12 px-4 text-center">
         <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-          <i className="fas fa-medal text-xl"></i>
+          <i className="fas fa-users text-xl"></i>
         </div>
         <h6 className="text-xl mt-5 font-semibold text-white">
-          Excelent Services
-          </h6>
+          Experience
+        </h6>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
-          </p>
+          We've helped build the top companies in Silicon Valley. Our advisors have decades of clinical research experience.
+        </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
         <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-          <i className="fas fa-poll text-xl"></i>
+          <i className="fas fa-shield-alt text-xl"></i>
         </div>
         <h5 className="text-xl mt-5 font-semibold text-white">
-          Grow your market
-          </h5>
+          Trust
+        </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
-          </p>
+          Security and complaince are critical, and our systems are HIPAA compliant and use the latest security and encryption technology.
+        </p>
       </div>
-      <div className="w-full lg:w-3/12 px-4 text-center">
+      <div className="w-full lg:w-3/12 px-4 mb-8 text-center">
         <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-          <i className="fas fa-lightbulb text-xl"></i>
+          <i className="fas fa-chart-line text-xl"></i>
         </div>
         <h5 className="text-xl mt-5 font-semibold text-white">
-          Launch time
-          </h5>
+          Performance
+        </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
-          </p>
+          We care deeply about your success, and will do everything we can to make sure you're meeting your goals.
+        </p>
       </div>
     </div>
   </div>
@@ -515,18 +347,18 @@ const Contact = () => <section className="relative block py-24 lg:pt-0 bg-gray-9
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
           <div className="flex-auto p-5 lg:p-10">
             <h4 className="text-2xl font-semibold">
-              Want to work with us?
+              Want to learn more?
               </h4>
             <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-              Complete this form and we will get back to you in 24 hours.
-              </p>
+              Send us a message and we will get back to you within 24 hours.
+            </p>
             <div className="relative w-full mb-3 mt-8">
               <label
                 className="block uppercase text-gray-700 text-xs font-bold mb-2"
                 htmlFor="full-name"
               >
                 Full Name
-                </label>
+              </label>
               <input
                 type="text"
                 className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
@@ -534,14 +366,13 @@ const Contact = () => <section className="relative block py-24 lg:pt-0 bg-gray-9
                 style={{ transition: "all .15s ease" }}
               />
             </div>
-
             <div className="relative w-full mb-3">
               <label
                 className="block uppercase text-gray-700 text-xs font-bold mb-2"
                 htmlFor="email"
               >
                 Email
-                </label>
+              </label>
               <input
                 type="email"
                 className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
@@ -556,7 +387,7 @@ const Contact = () => <section className="relative block py-24 lg:pt-0 bg-gray-9
                 htmlFor="message"
               >
                 Message
-                </label>
+              </label>
               <textarea
                 rows={4}
                 cols={80}
@@ -571,7 +402,7 @@ const Contact = () => <section className="relative block py-24 lg:pt-0 bg-gray-9
                 style={{ transition: "all .15s ease" }}
               >
                 Send Message
-                </button>
+              </button>
             </div>
           </div>
         </div>
