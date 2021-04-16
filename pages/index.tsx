@@ -15,6 +15,8 @@ const IndexPage = () => (
 
 export default IndexPage
 
+const heroImageKey = 'NURSE_COMPUTER'
+
 /// Page Sections
 const Hero = () => (<div className="relative pt-16 pb-32 flex content-center items-center justify-center"
   style={{
@@ -22,7 +24,7 @@ const Hero = () => (<div className="relative pt-16 pb-32 flex content-center ite
   }}>
   <div className="absolute top-0 w-full h-full bg-center bg-cover"
     style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')"
+      backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80')"
     }}>
     <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
   </div>

@@ -1,11 +1,10 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 
 interface Props {
   transparent?: boolean
 }
 
 function Navbar(props: Props): ReactElement {
-  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav
       className={
@@ -20,7 +19,7 @@ function Navbar(props: Props): ReactElement {
           <div
             className={
               (props.transparent ? "text-white" : "text-gray-800") +
-              " title-lg text-2xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              " title-lg text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             }
           >
             Fabric Bio
