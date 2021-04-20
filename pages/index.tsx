@@ -342,7 +342,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Experience
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          <a className="underline" href="https://www.linkedin.com/in/noahmaccallum/">Noah</a> was an early engineer and product manager at <a className="underline" href="https://goforward.com/">Forward Health</a>, and <a className="underline" href="https://www.linkedin.com/in/zainm">Zain</a> was an engineering leader at <a className="underline" href="https://www.opendoor.com/">OpenDoor</a>. Our advisors have decades of clinical research experience.
+          <a className="underline" href="https://www.linkedin.com/in/noahmaccallum/">Noah</a> was an early engineer and product manager at <a className="underline" href="https://goforward.com/">Forward Health</a>, and <a className="underline" href="https://www.linkedin.com/in/zainm">Zain</a> was an engineering leader at <a className="underline" href="https://www.opendoor.com/">Opendoor</a>. Our advisors have decades of clinical research experience.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 mb-8 text-center">
