@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `
-                                if (document.location.hostname.search("arkhealth.com") !== -1) {
+                                if (document.location.hostname.search("arkhealth") !== -1) {
                                     window.dataLayer = window.dataLayer || [];
                                     function gtag(){dataLayer.push(arguments);}
                                     gtag('js', new Date());
