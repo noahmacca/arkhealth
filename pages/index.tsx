@@ -150,7 +150,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-600">
           <img
             alt="..."
-            src="https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2700&q=80"
+            src="https://images.unsplash.com/photo-1519975258993-60b42d1c2ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"
             className="w-full align-middle rounded-t-lg"
           />
           <blockquote className="relative p-8 mb-4">
@@ -173,7 +173,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Fill Your Studies Faster
             </h4>
             <p className="text-md font-light mt-2 text-white">
-              We'll connect your study with our large, engaged patient population that's keen on participating in clinical research. Leave consumer outreach to the experts.
+              We'll connect your study with our large, engaged, and diverse patient population that's keen on participating in clinical research. Leave outreach to the larger population to the experts.
             </p>
           </blockquote>
         </div>
@@ -206,11 +206,11 @@ const Featured = () => <section className="relative py-20 pb-32">
 
   <div className="container mx-auto px-4">
     <div className="items-center flex flex-wrap">
-      <div className="max-w-full md:w-4/12 ml-auto mr-auto px-4 mb-4">
+      <div className="max-w-full md:w-5/12 ml-auto mr-auto px-4 mb-4">
         <img
           alt="..."
           className="max-w-full rounded-lg shadow-lg"
-          src="https://images.unsplash.com/photo-1596633607590-7156877ef734?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1352&q=80"
         />
       </div>
       <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
