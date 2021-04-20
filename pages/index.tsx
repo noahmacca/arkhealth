@@ -92,7 +92,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
               <i className="fas fa-project-diagram"></i>
             </div>
-            <h6 className="text-xl font-semibold">Understand your EMR Data</h6>
+            <h6 className="text-xl font-semibold">Understand EMR Data</h6>
             <p className="mt-2 mb-4 text-gray-600">
               We compliantly surface the eligible patients already in your health system using the latest in machine learning and natural language processing.
             </p>
