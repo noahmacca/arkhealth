@@ -94,7 +94,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             </div>
             <h6 className="text-xl font-semibold">Understand your EMR Data</h6>
             <p className="mt-2 mb-4 text-gray-600">
-              We use the best data science and machine learning to structure your EMR data and surface the eligible patients already in your practice.
+              We compliantly surface the eligible patients already in your health system using the latest in machine learning and natural language processing.
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Easily Enroll Patients
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              Use industry-leading tools and workflows to ensure nobody slips through the cracks. Give superpowers to your research coordinators.
+              We provide industry-leading tools and workflows to ensure nobody slips through the cracks. Give superpowers to your research coordinators.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Site-Level Analytics
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              Your clinical site lead can easily understand what's working, how to improve, and whether you're on track to hit timelines.
+              Your clinical site lead can easily understand whether you're on track to hit timelines, what's working well, and what to change to improve performance.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
           Become a top performing research site
           </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-          Recruiting for clinical trials shouldn't be so hard. Let us do the heavy lifting to help find eligible patients who are excited to participate in the cutting edge of medicine.
+          Recruiting for clinical trials shouldn't be so hard. Let us do the heavy lifting to help find eligible patients that are excited to participate in the cutting edge of medicine.
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
           With our enrollment management system, your team will enroll more patients faster, with less manual tracking and work.
@@ -242,7 +242,7 @@ const Featured = () => <section className="relative py-20 pb-32">
                   </span>
                 </div>
                 <div>
-                  <h4 className="text-gray-600">Fast chart review</h4>
+                  <h4 className="text-gray-600">Fast, intuitive chart review</h4>
                 </div>
               </div>
             </li>
@@ -255,7 +255,7 @@ const Featured = () => <section className="relative py-20 pb-32">
                 </div>
                 <div>
                   <h4 className="text-gray-600">
-                    Automated patient reachout
+                    Automated patient communications
                   </h4>
                 </div>
               </div>
@@ -318,7 +318,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Who We Are
         </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-          Clinical Trials are a key bottleneck for new, lifesaving medicine to reach patients, and we're passionate about making them dramatically faster, cheaper, and more accessible.
+          We're passionate about helping lifesaving treatments reach the market faster via more efficient clinical trials, while democratizing early access to the best treatment options for clinical research participants.
         </p>
       </div>
     </div>
