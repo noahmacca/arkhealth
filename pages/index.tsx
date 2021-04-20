@@ -1,68 +1,87 @@
 import Layout from '../components/Layout'
-import { useState } from 'react';
+import { useState, useRef, PropsWithChildren } from 'react';
 import * as emailjs from 'emailjs-com';
 import * as gtag from "../lib/gtag";
 
-const IndexPage = () => (
-  <Layout title="Ark Health">
+const IndexPage = () => {
+  const divRef = useRef<HTMLLinkElement>(null);
 
-    <Hero />
-    <Services />
-    <Featured />
-    <Finisher />
-    <Contact />
+  return (
+    <Layout title="Ark Health">
+      <Hero divRefScrollHandler={() => {
+        divRef.current !== null && divRef.current.scrollIntoView({ behavior: 'smooth' })
+      }} />
+      <Services />
+      <Featured />
+      <Finisher />
+      <Contact divRef={divRef} />
+    </Layout>
+  )
+}
 
-  </Layout>
-)
 
 export default IndexPage
 
 /// Page Sections
-const Hero = () => (<div className="relative pt-16 pb-32 flex content-center items-center justify-center"
-  style={{
-    minHeight: "75vh"
-  }}>
-  <div className="absolute top-0 w-full h-full bg-center bg-cover"
-    style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80')"
-    }}>
-    <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
-  </div>
-  <div className="container relative mx-auto">
-    <div className="items-center flex flex-wrap">
-      <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-        <div className="px-4">
-          <h1 className="text-white font-semibold text-5xl">
-            Faster Clinical Trial Recruitment
+interface HeroProps {
+  divRefScrollHandler?: any,
+}
+
+const Hero = (props: PropsWithChildren<HeroProps>) => {
+
+  return (
+    <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+      style={{
+        minHeight: "75vh"
+      }}>
+      <div className="absolute top-0 w-full h-full bg-center bg-cover"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80')"
+        }}>
+        <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <div className="container relative mx-auto">
+        <div className="items-center flex flex-wrap">
+          <div className="w-full px-4 ml-auto mr-auto text-center">
+            <div className="px-4">
+              <h1 className="text-white font-semibold text-5xl">
+                Faster Clinical Trial Recruitment
           </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Struggling to hit enrollment timelines? We're here to help.
+              <p className="mt-4 text-lg text-gray-300">
+                Struggling to hit enrollment timelines? We're here to help.
           </p>
+            </div>
+          </div>
+          <a
+            className="mt-10 mx-auto px-8 py-3 bg-white rounded-xl font-semibold border-none text-lg cursor-pointer"
+            onClick={() => props.divRefScrollHandler()}
+          >
+            Get in Touch
+      </a>
         </div>
       </div>
-
+      <div
+        className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style={{ height: "70px" }}
+      >
+        <svg
+          className="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            className="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
     </div>
-  </div>
-  <div
-    className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-    style={{ height: "70px" }}
-  >
-    <svg
-      className="absolute bottom-0 overflow-hidden"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-      version="1.1"
-      viewBox="0 0 2560 100"
-      x="0"
-      y="0"
-    >
-      <polygon
-        className="text-gray-300 fill-current"
-        points="2560 0 2560 100 0 100"
-      ></polygon>
-    </svg>
-  </div>
-</div>)
+  )
+}
 
 const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
   <div className="container mx-auto px-4">
@@ -73,26 +92,25 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
               <i className="fas fa-project-diagram"></i>
             </div>
-            <h6 className="text-xl font-semibold">Understand Your EMR Data</h6>
+            <h6 className="text-xl font-semibold">Understand your EMR Data</h6>
             <p className="mt-2 mb-4 text-gray-600">
-              We use the best data science and machine learning to compliantly process your EMR data, so you can determine who is eligible for your studies.
-              </p>
+              We use the best data science and machine learning to structure your EMR data and surface the eligible patients already in your practice.
+            </p>
           </div>
         </div>
       </div>
-
       <div className="w-full md:w-4/12 px-4 text-center">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-              <i className="fas fa-search"></i>
+              <i className="fas fa-user-friends"></i>
             </div>
             <h6 className="text-xl font-semibold">
-              Discover New Patients
-              </h6>
+              Easily Enroll Patients
+            </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              There are many people in the larger community who would love to participate in your study. We screen for eligibility and connect them to your staff.
-              </p>
+              Use industry-leading tools and workflows to ensure nobody slips through the cracks. Give superpowers to your research coordinators.
+            </p>
           </div>
         </div>
       </div>
@@ -101,13 +119,13 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-              <i className="fas fa-user-friends"></i>
+              <i className="fas fa-chart-line"></i>
             </div>
             <h6 className="text-xl font-semibold">
-              Enroll Patients
+              Site-Level Analytics
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              Use industry-leading tools to ensure nobody slips through the cracks. Easily reach out, schedule appointments, request and review charts, and receive informed consent.
+              Your clinical site lead can easily understand what's working, how to improve, and whether you're on track to hit timelines.
             </p>
           </div>
         </div>
@@ -124,7 +142,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
           Recruiting for clinical trials shouldn't be so hard. Let us do the heavy lifting to help find eligible patients who are excited to participate in the cutting edge of medicine.
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-          We'll work with your team to implement our enrollment management system. Your team will enroll more patients faster, and with less manual tracking and work.
+          With our enrollment management system, your team will enroll more patients faster, with less manual tracking and work.
         </p>
       </div>
 
@@ -152,10 +170,10 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               ></polygon>
             </svg>
             <h4 className="text-xl font-bold text-white">
-              Site-Level Analytics
+              Fill Your Studies Faster
             </h4>
             <p className="text-md font-light mt-2 text-white">
-              We'll help your clinical site lead understand how your site is performing, whether it's on track to hit your goals, and what you can do to improve.
+              We'll connect your study with our large, engaged patient population that's keen on participating in clinical research. Leave consumer outreach to the experts.
             </p>
           </blockquote>
         </div>
@@ -188,48 +206,22 @@ const Featured = () => <section className="relative py-20 pb-32">
 
   <div className="container mx-auto px-4">
     <div className="items-center flex flex-wrap">
-      <div className="max-w-full md:w-5/12 ml-auto mr-auto px-4 mb-4">
+      <div className="max-w-full md:w-4/12 ml-auto mr-auto px-4 mb-4">
         <img
           alt="..."
           className="max-w-full rounded-lg shadow-lg"
-          src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2704&q=80"
+          src="https://images.unsplash.com/photo-1596633607590-7156877ef734?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
         />
       </div>
       <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
         <div className="md:pr-12">
           <h3 className="text-3xl font-semibold">
             How it works
-            </h3>
+          </h3>
           <p className="mt-4 text-lg leading-relaxed text-gray-600">
             We understand how the best sites become top performers. The right tools are key to meet enrollment timelines.
           </p>
           <ul className="list-none mt-6">
-            <li className="py-2">
-              <div className="flex items-center">
-                <div>
-                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                    <i className="fas fa-envelope-open-text"></i>
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-gray-600">
-                    Automated patient engagement
-                    </h4>
-                </div>
-              </div>
-            </li>
-            <li className="py-2">
-              <div className="flex items-center">
-                <div>
-                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
-                    <i className="fas fa-calendar-plus"></i>
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-gray-600">Automated scheduling</h4>
-                </div>
-              </div>
-            </li>
             <li className="py-2">
               <div className="flex items-center">
                 <div>
@@ -258,6 +250,32 @@ const Featured = () => <section className="relative py-20 pb-32">
               <div className="flex items-center">
                 <div>
                   <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                    <i className="fas fa-envelope-open-text"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-gray-600">
+                    Automated patient reachout
+                  </h4>
+                </div>
+              </div>
+            </li>
+            <li className="py-2">
+              <div className="flex items-center">
+                <div>
+                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
+                    <i className="fas fa-calendar-plus"></i>
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-gray-600">Automated scheduling</h4>
+                </div>
+              </div>
+            </li>
+            <li className="py-2">
+              <div className="flex items-center">
+                <div>
+                  <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3">
                     <i className="fas fa-check-square"></i>
                   </span>
                 </div>
@@ -272,7 +290,6 @@ const Featured = () => <section className="relative py-20 pb-32">
     </div>
   </div>
 </section>
-
 
 const Finisher = () => <section className="pb-20 relative block bg-gray-900">
   <div
@@ -311,10 +328,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           <i className="fas fa-users text-xl"></i>
         </div>
         <h6 className="text-xl mt-5 font-semibold text-white">
-          Experience
+          Trust
         </h6>
         <p className="mt-2 mb-4 text-gray-500">
-          We've helped build the top companies in Silicon Valley. Our advisors have decades of clinical research experience.
+          Security and complaince are critical, and our systems are HIPAA compliant and use the latest security and encryption technology.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -322,10 +339,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           <i className="fas fa-shield-alt text-xl"></i>
         </div>
         <h5 className="text-xl mt-5 font-semibold text-white">
-          Trust
+          Experience
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Security and complaince are critical, and our systems are HIPAA compliant and use the latest security and encryption technology.
+          <a className="underline" href="https://www.linkedin.com/in/noahmaccallum/">Noah</a> was an early engineer and product manager at <a className="underline" href="https://goforward.com/">Forward Health</a>, and <a className="underline" href="https://www.linkedin.com/in/zainm">Zain</a> was an engineering leader at <a className="underline" href="https://www.opendoor.com/">OpenDoor</a>. Our advisors have decades of clinical research experience.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 mb-8 text-center">
@@ -343,7 +360,11 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
   </div>
 </section>
 
-const Contact = () => {
+interface ContactProps {
+  divRef?: any,
+}
+
+const Contact = (props: PropsWithChildren<ContactProps>) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -375,7 +396,7 @@ const Contact = () => {
   }
 
   return (
-    <section className="relative block py-24 lg:pt-0 bg-gray-900">
+    <section className="relative block py-24 lg:pt-0 bg-gray-900" ref={props.divRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">
