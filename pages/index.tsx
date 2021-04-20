@@ -53,7 +53,7 @@ const Hero = (props: PropsWithChildren<HeroProps>) => {
             </div>
           </div>
           <a
-            className="mt-10 mx-auto px-8 py-3 bg-white rounded-xl font-semibold border-none text-lg cursor-pointer"
+            className="mt-10 mx-auto px-8 py-3 bg-white rounded-3xl font-semibold border-none text-lg cursor-pointer text-gray-700"
             onClick={() => props.divRefScrollHandler()}
           >
             Get in Touch
